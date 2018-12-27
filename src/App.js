@@ -1,28 +1,27 @@
 import React, { Component } from 'react';
-import logo from './logo.svg';
+import { Login, Register, withAuth, Auth, AuthCode, AuthenticatorSetup, AuthenticatorDisable, PasswordReset, PasswordUpdate } from 'presearch-react-components';
 import './App.css';
 
 class App extends Component {
   render() {
+
+    const { login, getPasswordStrength } = this.props;
+
+    console.log("PASSWORD STRENGTH: ", getPasswordStrength('a123c'));
+
+    console.log("TYPEOF LOGIN: ", typeof login);
+    console.log("LOGIN: ", login);
+
     return (
-      <div className="App">
-        <header className="App-header">
-          <img src={logo} className="App-logo" alt="logo" />
-          <p>
-            Edit <code>src/App.js</code> and save to reload.
-          </p>
-          <a
-            className="App-link"
-            href="https://reactjs.org"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Learn React
-          </a>
-        </header>
+      <div
+        className="App"
+        style={{display: 'flex', flexDirection: 'column', justifyContent: 'center', alignItems: 'center', padding: 20}}
+      >
+        <Auth />
+        <PasswordUpdate />
+        <AuthenticatorSetup />
       </div>
     );
   }
 }
-
-export default App;
+export default withAuth(App);
