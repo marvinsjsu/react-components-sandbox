@@ -4,7 +4,6 @@
   "private": true,
   "dependencies": {
     "react": "^16.6.3",
-    "react-components": "git+ssh://git@github.com/PresearchOfficial/react-components.git",
     "react-dom": "^16.6.3",
     "react-scripts": "2.1.1"
   },
