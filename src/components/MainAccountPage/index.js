@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 import { Auth } from 'react-components';
 import { Redirect, Link } from 'react-router-dom';
 import Cookies from 'universal-cookie';
+import { PASSWORD_REDIRECT } from '../../utils/constants';
 
 import '../../App.css';
 
@@ -66,6 +67,7 @@ class App extends Component {
         <Auth
           initialDisplayComponent={'logout'}
           successCB={this.successCB}
+          passwordResetRedirect={PASSWORD_REDIRECT}
         />
       </div>
     );

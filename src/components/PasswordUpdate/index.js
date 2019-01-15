@@ -2,6 +2,9 @@ import React, { Component } from 'react';
 import { Auth } from 'react-components';
 import { withRouter, Redirect } from 'react-router-dom';
 import qs from 'qs';
+
+import { PASSWORD_REDIRECT } from '../../utils/constants';
+
 import '../../App.css';
 
 class App extends Component {
@@ -74,7 +77,7 @@ class App extends Component {
 
         <Auth
           initialDisplayComponent={'password_update'}
-          passwordResetRedirect={'http://marvin.playground.s3-website-us-west-2.amazonaws.com/passwordReset'}
+          passwordResetRedirect={PASSWORD_REDIRECT}
           token={this.state.token}
           successCB={this.successCB}
         />

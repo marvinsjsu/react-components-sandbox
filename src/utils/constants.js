@@ -1,0 +1,1 @@
+const PASSWORD_REDIRECT = 'http://marvin.playground.s3-website-us-west-2.amazonaws.com/passwordReset';
