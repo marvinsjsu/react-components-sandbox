@@ -1,6 +1,8 @@
 import React, { Component } from 'react';
 import { Auth } from 'react-components';
 import { Redirect } from 'react-router-dom';
+import { PASSWORD_REDIRECT } from '../../utils/constants';
+
 import '../../App.css';
 
 class App extends Component {
@@ -67,7 +69,7 @@ class App extends Component {
 
         <Auth
           initialDisplayComponent={'authenticator_disable'}
-          passwordResetRedirect={'http://marvin.playground.s3-website-us-west-2.amazonaws.com/passwordReset'}
+          passwordResetRedirect={PASSWORD_REDIRECT}
           successCB={this.successCB}
           onClickDone={this.doneCB}
           onClickCancel={this.cancelCB}

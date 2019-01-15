@@ -1,5 +1,9 @@
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
+
+- please update `/src/utils/constants.js` with the needed `redirect url` used for the password reset email.
+
+
 ## Available Scripts
 
 In the project directory, you can run:
