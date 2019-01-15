@@ -1,1 +1,2 @@
-const PASSWORD_REDIRECT = 'http://marvin.playground.s3-website-us-west-2.amazonaws.com/passwordReset';
+// please update with proper redirect url
+export const PASSWORD_REDIRECT = 'http://localhost:3001/passwordReset';
