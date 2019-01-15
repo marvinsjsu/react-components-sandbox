@@ -1,7 +1,12 @@
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
-
-
 - please update `/src/utils/constants.js` with the needed `redirect url` used for the password reset email.
+- `src/components` has the components that use `Auth` component:
+    - `Disable2FA` is the flow for disabling 2FA authentication
+    - `Enable2FA` is the flow for enabling 2FA authentication
+    - `MainAccountPage` is the page that displays the links to the flows and shows `user id`
+    - `MainPage` is the landing page with login/sign-up component
+    - `PasswordUpdate` is the flow for updating user password
+
+This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
 
 ## Available Scripts
