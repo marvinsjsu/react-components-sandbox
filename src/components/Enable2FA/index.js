@@ -1,6 +1,8 @@
 import React, { Component } from 'react';
 import { Auth } from 'react-components';
 import { Redirect } from 'react-router-dom';
+import { PASSWORD_REDIRECT } from '../../utils/constants';
+
 import '../../App.css';
 
 class App extends Component {
@@ -14,6 +16,7 @@ class App extends Component {
     this.onClick = this.onClick.bind(this);
     this.successCB = this.successCB.bind(this);
     this.onClickDone = this.onClickDone.bind(this);
+    this.onClickCancel = this.onClickCancel.bind(this);
   }
 
   onClick(display) {
@@ -30,6 +33,12 @@ class App extends Component {
   }
 
   onClickDone() {
+    this.setState({
+      display: 'account',
+    });
+  }
+
+  onClickCancel() {
     this.setState({
       display: 'account',
     });
@@ -54,15 +63,15 @@ class App extends Component {
           flexDirection: 'column',
           justifyContent: 'center',
           alignItems: 'center',
-          padding: 20
         }}
       >
 
         <Auth
           initialDisplayComponent={'authenticator_setup'}
-          passwordResetRedirect={'http://marvin.playground.s3-website-us-west-2.amazonaws.com/passwordReset'}
+          passwordResetRedirect={PASSWORD_REDIRECT}
           successCB={this.successCB}
           onClickDone={this.onClickDone}
+          onClickCancel={this.onClickCancel}
         />
       </div>
     );
