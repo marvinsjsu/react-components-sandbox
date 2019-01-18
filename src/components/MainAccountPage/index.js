@@ -55,7 +55,6 @@ class App extends Component {
           flexDirection: 'column',
           justifyContent: 'center',
           alignItems: 'center',
-          padding: 20
         }}
       >
         <h4>Account Page - user id: {user && user.id}</h4>
